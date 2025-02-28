@@ -14,19 +14,19 @@ const NavBar = () => {
                 <ul className='hidden md:inline-flex gap-5 '>
                     <NavLink to="/">
                         <li className='py-1 text-sm '>Home</li>
-                        <hr className=' border-none  outline-none h-0.5 m-auto w-3/5 ' />
+                        <hr className=' border-none  outline-none h-0.5 m-auto w-3/5 bg-gray-400 hidden ' />
                     </NavLink>
                     <NavLink to="/contact">
                         <li className='py-1 text-sm'>Contact</li>
-                        <hr className=' border-none  outline-none h-0.5 m-auto w-3/5 ' />
+                        <hr className=' border-none  outline-none h-0.5 m-auto w-3/5 bg-gray-400 hidden ' />
                     </NavLink>
                     <NavLink to="/about">
                         <li className='py-1 text-sm'>About</li>
-                        <hr className='border-none  outline-none h-0.5 m-auto w-3/5 ' />
+                        <hr className=' bg-gray-400  border-none  outline-none h-0.5 m-auto w-3/5 hidden ' />
                     </NavLink>
                     <NavLink to="/signup">
                         <li className='py-1 text-sm'>Sign Up</li>
-                        <hr className='  border-none  outline-none h-0.5 m-auto w-3/5 ' />
+                        <hr className=' bg-gray-400 border-none  outline-none h-0.5 m-auto w-3/5 hidden ' />
                     </NavLink>
 
                 </ul>
