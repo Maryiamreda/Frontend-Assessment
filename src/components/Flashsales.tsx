@@ -5,7 +5,9 @@ import Gamingmonitor from '../assets/images/gaming_monitor.png';
 import Chair from '../assets/images/comfort_chair.png';
 import Laptop from '../assets/images/gaminglaptop.png';
 import Arrow from '../assets/icons/Arrowright.svg';
-
+import Eye from '../assets/icons/Filleyes.svg';
+import Heart from '../assets/icons/Wishlist.svg';
+import Wishlist from '../pages/Wishlist';
 const items = [
     { id: 1, name: "HAVIT HV-G92 Gamepad", currentPrice: 120, originalPrice: 160, discount: "-25%", image: Redgamepad, rating: 4.8, reviews: 88 },
     { id: 2, name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, discount: "-20%", image: GamingKey, rating: 4.7, reviews: 75 },
@@ -112,6 +114,14 @@ const Flashsales = () => {
                     <div key={item.id} className="flex-shrink-0 cursor-pointer hover:translate-y-[-10px] transition-all duration-500">
                         <div className='bg-[#F7F7FC] w-56 h-56  p-4 flex items-center'>
                             <img src={item.image} alt={item.name} className="w-40 mx-auto" />
+                            <div className='absolute flex '>
+                                <div>{item.discount}</div>
+                                <div>
+                                    <div className='bg-white'>     <img src={Eye} />
+                                    </div>
+                                    <div className='bg-white'>   <img src={Heart} />  </div>
+                                </div>
+                            </div>
                         </div>
                         <h3 className="mt-2 text-lg">{item.name}</h3>
                         <p className="text-sm text-gray-500">{item.discount}</p>
