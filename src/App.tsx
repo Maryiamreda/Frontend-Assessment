@@ -10,6 +10,7 @@ import About from './pages/About';
 import Signup from './pages/Signup';
 import Wishlist from './pages/Wishlist';
 import Cart from './pages/Cart';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
 
       </Routes>
+      <Footer />
     </>
   )
 }

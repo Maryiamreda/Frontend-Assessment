@@ -1,11 +1,10 @@
-import React from 'react';
 import Header from '../components/Header';
 import Quicksearch from '../components/Quicksearch';
 
 const Homepage = () => {
     return (
         <div className=' px-28 '>
-            <div className='header flex justify-between h-[380px]'>
+            <div className='header flex justify-between  h[450px] md:h-[380px]'>
                 <Quicksearch />
                 <Header />
             </div>

@@ -44,3 +44,19 @@ body {
   filter: brightness(0) invert(1);
 
 }
+
+.footer li {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.copyrights {
+  border-top: 1px solid rgba(209, 213, 220, 0.16);
+
+}

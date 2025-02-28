@@ -4,10 +4,9 @@ import Arrowright from '../assets/icons/Arrowright.svg'
 const Header = () => {
     return (
         <div className='bg-black text-white font-normal mt-10  pl-10 py-6 w-[800px]  '>
-
-            <div className='flex justify-between'>
-                <div className='flex flex-col pt-9 '>
-                    <div className='flex text-base items-center gap-2'>
+            <div className='flex justify-between flex-col md:flex-row items-center'>
+                <div className='flex flex-col md:pt-9 '>
+                    <div className='flex text-base items-center md:gap-2'>
                         <img src={Apple} className='w-11' />
                         <p className='text-base'>iPhone 14 Series</p>
                     </div>
