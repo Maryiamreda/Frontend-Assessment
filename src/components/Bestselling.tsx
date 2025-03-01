@@ -69,7 +69,7 @@ const Bestselling = () => {
                     <h1 className='text-3xl font-semibold'>Best Selling Products</h1>
 
                 </div>
-                <div className='flex items-center justify-center bg-[#DB4444] text-white text-sm rounded py-3 px-8'>
+                <div className='flex items-center justify-center bg-[#DB4444] text-white text-sm rounded py-3 px-8 cursor-pointer'>
                     <p>View All</p>
                 </div>
             </div>

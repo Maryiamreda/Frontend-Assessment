@@ -3,6 +3,7 @@ import Categories from '../components/Categories';
 import Flashsales from '../components/Flashsales';
 import Header from '../components/Header';
 import Quicksearch from '../components/Quicksearch';
+import Secondheader from '../components/Secondheader';
 
 const Homepage = () => {
     return (
@@ -15,6 +16,7 @@ const Homepage = () => {
             <Flashsales />
             <Categories />
             <Bestselling />
+            <Secondheader />
         </div>
     );
 }
