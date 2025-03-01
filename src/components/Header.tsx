@@ -5,14 +5,14 @@ const Header = () => {
     return (
         <div className='bg-black text-white font-normal mt-10  pl-10 py-6 w-[800px]  '>
             <div className='flex justify-between flex-col md:flex-row items-center'>
-                <div className='flex flex-col md:pt-9 '>
+                <div className='flex flex-col  '>
                     <div className='flex text-base items-center md:gap-2'>
                         <img src={Apple} className='w-11' />
                         <p className='text-base'>iPhone 14 Series</p>
                     </div>
                     <h1 className='text-3xl md:text-5xl font-semibold  text-start leading-16'>Up to 10% <br /> off Voucher</h1>
                     <div className='flex text-white gap-2 mt-3'>
-                        <p className='border-b-1 text-base '>Shop Now</p>
+                        <a href='#categories' className='border-b-1 text-base '>Shop Now</a>
                         <img src={Arrowright} className='svg-white   max-w-11' />
                     </div>
                 </div>

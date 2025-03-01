@@ -45,7 +45,7 @@ body {
 
 }
 
-.ellipse div.active {
+.ellipse div:hover {
   background-color: #DB4444;
   border-color: white;
 }
@@ -57,6 +57,10 @@ body {
 .svg-white {
   filter: brightness(0) invert(1);
 
+}
+
+.icon-bg-white:hover img {
+  filter: brightness(0) invert(1);
 }
 
 .footer li {

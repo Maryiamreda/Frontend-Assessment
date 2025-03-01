@@ -1,3 +1,5 @@
+import Bestselling from '../components/Bestselling';
+import Categories from '../components/Categories';
 import Flashsales from '../components/Flashsales';
 import Header from '../components/Header';
 import Quicksearch from '../components/Quicksearch';
@@ -11,6 +13,8 @@ const Homepage = () => {
 
             </div>
             <Flashsales />
+            <Categories />
+            <Bestselling />
         </div>
     );
 }

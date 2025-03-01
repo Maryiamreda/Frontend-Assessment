@@ -7,7 +7,6 @@ import Laptop from '../assets/images/gaminglaptop.png';
 import Arrow from '../assets/icons/Arrowright.svg';
 import Eye from '../assets/icons/Filleyes.svg';
 import Heart from '../assets/icons/Wishlist.svg';
-import Wishlist from '../pages/Wishlist';
 const items = [
     { id: 1, name: "HAVIT HV-G92 Gamepad", currentPrice: 120, originalPrice: 160, discount: "-25%", image: Redgamepad, rating: 4.8, reviews: 88 },
     { id: 2, name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, discount: "-20%", image: GamingKey, rating: 4.7, reviews: 75 },
