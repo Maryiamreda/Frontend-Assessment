@@ -146,7 +146,7 @@ const Flashsales = () => {
                     </div>
                 ))}
             </div>
-            <button className='text-white bg-[#DB4444] cursor-pointer p-2.5 text-xs w-40 rounded ml-[45%] my-10  flex justify-center   '>View All Products</button>
+            <button className='text-white bg-[#DB4444] cursor-pointer p-2.5 text-xs w-40 rounded ml-[43%] my-10  flex justify-center   '>View All Products</button>
 
         </div>
     );

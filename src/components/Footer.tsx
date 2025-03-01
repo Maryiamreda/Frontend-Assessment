@@ -11,15 +11,15 @@ import Send from '../assets/icons/send.svg'
 const Footer = () => {
     return (
         <div className=' footer bg-black text-white text-start mt-5  pt-4' >
-            <div className='flex justify-between px-28'>
+            <div className='flex justify-between px-2 md:px-28'>
                 <div className='flex flex-col gap-2 '>
                     <h1 className='text-xl font-semibold'>Exclusive</h1>
                     <h2 className='text-lg'>Subscribe</h2>
-                    <p className='text-sm'>Get 10% off your first order</p>
+                    <p className='text-xs md:text-sm'>Get 10% off your first order</p>
                     <div className='flex border-2 border-white p-2 rounded  '>
-                        <input type='text' placeholder='Enter your email' className='text-sm w-[120px]  placeholder-[#A0A3BD] focus:outline-0' />
+                        <input type='text' placeholder='Enter your email' className='text-xs md:text-sm w-[90px] md:w-[120px]  placeholder-[#A0A3BD]  focus:outline-0' />
                         <img src={Send}
-                            className='svg-white w-5'
+                            className='svg-white w-3 md:w-5'
                         />
                     </div>
                 </div>
