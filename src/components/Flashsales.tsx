@@ -17,6 +17,7 @@ const items = [
 ];
 
 const Flashsales = () => {
+    const [hoveredItem, setHoveredItem] = useState<number | null>(null);
     const scrollRef = useRef<HTMLDivElement | null>(null);
 
     const scroll = (direction: string) => {
@@ -58,12 +59,12 @@ const Flashsales = () => {
 
 
     return (
-        <div className='mt-20'>
-            <div className='flex text-[#DB4444] text-sm font-semibold items-center gap-2 px-28'>
+        <div className='mt-20 border-b  border-b-gray-300  mx-28 flex flex-col gap-4 '>
+            <div className='flex text-[#DB4444] text-sm font-semibold items-center gap-2 '>
                 <div className='bg-[#DB4444] w-3 h-7 rounded'></div>
                 <p>Today’s</p>
             </div>
-            <div className='flex justify-between items-center px-28'>
+            <div className='flex justify-between items-center '>
                 <div className='flex gap-5 justify-center items-center'>
                     <h1 className='text-3xl font-semibold'>Flash Sales</h1>
                     <div className="flex gap-2">
@@ -90,7 +91,7 @@ const Flashsales = () => {
 
                         <div>
                             <p className='text-xs'>Seconds</p>
-                            <div className='text-3xl font-semibold'> {Math.floor(time % 60)}s
+                            <div className='text-3xl font-semibold'> {Math.floor(time % 60)}
                             </div>
 
                         </div>
@@ -109,27 +110,44 @@ const Flashsales = () => {
                     </div>
                 </div>
             </div>
-            <div ref={scrollRef} className=' pl-28 mt-5 flex gap-4 overflow-x-scroll scrollbar-hidden  scroll-smooth'>
+            <div ref={scrollRef} className='  mt-5 flex gap-4 overflow-x-scroll scrollbar-hidden  scroll-smooth'>
                 {items.map((item) => (
-                    <div key={item.id} className="flex-shrink-0 cursor-pointer hover:translate-y-[-10px] transition-all duration-500">
-                        <div className='bg-[#F7F7FC] w-56 h-56  p-4 flex items-center'>
-                            <img src={item.image} alt={item.name} className="w-40 mx-auto" />
-                            <div className='absolute flex '>
-                                <div>{item.discount}</div>
-                                <div>
-                                    <div className='bg-white'>     <img src={Eye} />
-                                    </div>
-                                    <div className='bg-white'>   <img src={Heart} />  </div>
-                                </div>
+                    <div
+                        onMouseEnter={() => setHoveredItem(item.id)}
+                        onMouseLeave={() => setHoveredItem(null)}
+                        key={item.id} className="flex-shrink-0 cursor-pointer hover:translate-y-[-10px] w-56 transition-all duration-500">
+                        <div className='bg-[#F7F7FC] h-48 p-3 rounded   flex items-center '>
+
+                            <div className='text-white text-[10px] w-10 h-5 flex items-center justify-center rounded  bg-[#DB4444] relative -top-18'>{item.discount}</div>
+                            <img src={item.image} alt={item.name} className="w-36 mx-auto" />
+
+                            <div className='relative -top-14'>
+                                <div className='bg-white p-1 w-6 h-6 rounded-full flex items-center justify-center mb-3  '>   <img src={Heart} className='w-3.5' />  </div>
+                                <div className='bg-white p-1 w-6 h-6  rounded-full '><img src={Eye} className='w-4' /> </div>
                             </div>
+                            {hoveredItem === item.id && (
+                                <div className='bg-black text-white w-full py-1.5  font-medium text-sm
+                                 flex justify-center items-center 
+                                 absolute bottom-18 rounded-b left-0 cursor-pointer'>
+                                    Add To Cart
+                                </div>
+                            )}
                         </div>
-                        <h3 className="mt-2 text-lg">{item.name}</h3>
-                        <p className="text-sm text-gray-500">{item.discount}</p>
-                        <p className="text-lg font-bold">${item.currentPrice}</p>
-                        <p className="text-sm line-through text-gray-400">${item.originalPrice}</p>
+                        <h3 className="mt-2 font-bold text-sm">{item.name}</h3>
+                        <div className=' flex gap-3 items-center '>
+                            <p className="text-base text-red-500 font-semibold ">${item.currentPrice}</p>
+                            <p className="text-xs font-semibold line-through text-gray-500">${item.originalPrice}</p>
+                        </div>
+                        <div className='flex gap-3 items-center '>
+                            <div>stars</div>
+                            <p className="text-xs font-semibold  text-gray-500">({item.reviews})</p>
+                        </div>
+
                     </div>
                 ))}
             </div>
+            <button className='text-white bg-[#DB4444] cursor-pointer p-2.5 text-xs w-40 rounded ml-[45%] my-10  flex justify-center   '>View All Products</button>
+
         </div>
     );
 };
