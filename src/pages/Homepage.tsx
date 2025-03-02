@@ -6,6 +6,7 @@ import Newarrivals from '../components/Newarrivals';
 import Ourproducts from '../components/Ourproducts';
 import Quicksearch from '../components/Quicksearch';
 import Secondheader from '../components/Secondheader';
+import Service from '../components/Service';
 
 const Homepage = () => {
     return (
@@ -21,6 +22,7 @@ const Homepage = () => {
             <Secondheader />
             <Ourproducts />
             <Newarrivals />
+            <Service />
         </div>
     );
 }
