@@ -115,19 +115,24 @@ const Flashsales = () => {
                         onMouseEnter={() => setHoveredItem(item.id)}
                         onMouseLeave={() => setHoveredItem(null)}
                         key={item.id} className="flex-shrink-0 cursor-pointer hover:translate-y-[-10px] w-56 transition-all duration-500">
-                        <div className='bg-[#F7F7FC] h-48 p-3 rounded   flex items-center '>
+                        <div className='bg-[#F7F7FC] h-48 p-3 rounded relative  flex items-center '>
 
-                            <div className='text-white text-[10px] w-10 h-5 flex items-center justify-center rounded  bg-[#DB4444] relative -top-18'>{item.discount}</div>
+                            <div className='text-white text-[10px] w-10 h-5 flex items-center justify-center rounded  bg-[#DB4444] absolute top-3 left-3 '>{item.discount}</div>
                             <img src={item.image} alt={item.name} className="w-36 mx-auto" />
 
-                            <div className='relative -top-14'>
-                                <div className='bg-white p-1 w-6 h-6 rounded-full flex items-center justify-center mb-3  '>   <img src={Heart} className='w-3.5' />  </div>
-                                <div className='bg-white p-1 w-6 h-6  rounded-full '><img src={Eye} className='w-4' /> </div>
+                            <div className="absolute top-3 right-3 flex flex-col gap-2">
+                                <button className="bg-white w-8 h-8 rounded-full flex items-center cursor-pointer shadow-sm justify-center ">
+                                    <img src={Heart} className="w-4 h-4" alt="Favorite" />
+                                </button>
+                                <button className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm cursor-pointer">
+                                    <img src={Eye} className="w-4 h-4" alt="Quick view" />
+                                </button>
                             </div>
+
                             {hoveredItem === item.id && (
                                 <div className='bg-black text-white w-full py-1.5  font-medium text-sm
                                  flex justify-center items-center 
-                                 absolute bottom-18 rounded-b left-0 cursor-pointer'>
+                                 absolute bottom-0 rounded-b left-0 cursor-pointer'>
                                     Add To Cart
                                 </div>
                             )}
