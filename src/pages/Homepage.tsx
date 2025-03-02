@@ -2,6 +2,7 @@ import Bestselling from '../components/Bestselling';
 import Categories from '../components/Categories';
 import Flashsales from '../components/Flashsales';
 import Header from '../components/Header';
+import Newarrivals from '../components/Newarrivals';
 import Ourproducts from '../components/Ourproducts';
 import Quicksearch from '../components/Quicksearch';
 import Secondheader from '../components/Secondheader';
@@ -19,6 +20,7 @@ const Homepage = () => {
             <Bestselling />
             <Secondheader />
             <Ourproducts />
+            <Newarrivals />
         </div>
     );
 }
