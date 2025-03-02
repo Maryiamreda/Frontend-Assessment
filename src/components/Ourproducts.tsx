@@ -144,12 +144,12 @@ const Ourproducts = () => {
                     </div>
                 </div>
             </div>
-            <div className='  mt-5 grid grid-cols-2  md:grid-cols-4 w-full  justify-between gap-15 items-center'>
+            <div className='  mt-5 grid grid-cols-2  md:grid-cols-4 w-full   justify-between  lg:gap-15 items-center'>
                 {items.map((item) => (
                     <div
                         onMouseEnter={() => setHoveredItem(item.id)}
                         onMouseLeave={() => setHoveredItem(null)}
-                        key={item.id} className="flex-shrink-0 cursor-pointer hover:translate-y-[-10px] w-56 transition-all duration-500">
+                        key={item.id} className="flex-shrink-0 cursor-pointer hover:translate-y-[-10px] lg:w-56 transition-all duration-500">
                         <div className='bg-[#F7F7FC] h-48 p-3 rounded relative overflow-hidden   flex items-center justify-center '>
 
                             <img src={item.image} alt={item.name} className={` ${item.name == "Breed Dry Dog Food" ? "w-20" : "w-40"} `} />

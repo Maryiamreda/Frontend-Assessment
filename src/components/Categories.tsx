@@ -7,7 +7,7 @@ import Headphones from '../assets/icons/Headphone.svg';
 import Gaming from '../assets/icons/Gamepad.svg';
 
 const items = [
-    { name: "Phones", image: Phones }, { name: "Computers", image: Computers }, { name: "SmartWatch", image: SmartWatch }, { name: "Camera", image: "Camera" }, { name: "Headphones", image: Headphones },
+    { name: "Phones", image: Phones }, { name: "Computers", image: Computers }, { name: "SmartWatch", image: SmartWatch }, { name: "Camera", image: Camera }, { name: "Headphones", image: Headphones },
     { name: "Gaming", image: Gaming },
 ]
 const Categories = () => {

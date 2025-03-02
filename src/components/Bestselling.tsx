@@ -64,16 +64,16 @@ const Bestselling = () => {
                 <div className='bg-[#DB4444] w-3 h-7 rounded'></div>
                 <p className='font-medium'>This Month</p>
             </div>
-            <div className='flex justify-between items-center '>
+            <div className='flex flex-col md:flex-row gap-4 justify-between items-center '>
                 <div className='flex gap-5 justify-center items-center'>
                     <h1 className='text-3xl font-semibold'>Best Selling Products</h1>
 
                 </div>
-                <div className='flex items-center justify-center bg-[#DB4444] text-white text-sm rounded py-3 px-8 cursor-pointer'>
+                <div className='flex items-center justify-center bg-[#DB4444] text-white text-xs p-4 md:text-sm rounded md:py-3 md:px-8 cursor-pointer'>
                     <p>View All</p>
                 </div>
             </div>
-            <div className='  mt-5 flex gap-4 justify-between w-full  scroll-smooth'>
+            <div className='  mt-5 flex flex-col md:flex-row gap-4 justify-between w-full  scroll-smooth'>
                 {items.map((item) => (
                     <div
                         onMouseEnter={() => setHoveredItem(item.id)}

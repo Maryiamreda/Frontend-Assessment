@@ -12,18 +12,16 @@ const Newarrivals = () => {
             </div>
             <h1 className='text-3xl font-semibold'>New Arrival</h1>
 
-            <div className='flex gap-10 mt-10 '>
+            <div className='flex flex-col md:flex-row gap-10 mt-10 '>
                 <div className='bg-black text-white rounded flex flex-col-reverse relative hover:translate-y-[-10px]  transition-all duration-500 cursor-pointer'>
                     <div className='absolute bottom-8 pl-10 flex flex-col gap-2'>
                         <h2 className='font-semibold text-lg'>PlayStation 5</h2>
                         <p className='text-xs'>lack and White version of the PS5 <br /> coming out on sale.</p>
                         <a href='#categories' className=' text-sm underline cursor-pointer ' >ShopNow</a></div>
-
-
-                    <img src={Playstation} className='w-[500px] h-[430px]' />
+                    <img src={Playstation} className='w-50 md:w-[350px] lg:w-[500px] lg:h-[430px]' />
 
                 </div>
-                <div className='flex flex-col gap-10 w-[550px]'>
+                <div className='flex flex-col gap-10 md:w-[550px]'>
                     <div className='bg-black text-white rounded flex hover:translate-y-[-10px] relative  transition-all duration-500 cursor-pointer'>
 
                         <div className=' flex flex-col gap-2 mt-25 ml-5 '>
@@ -31,12 +29,12 @@ const Newarrivals = () => {
                             <p className='text-xs'>Featured woman collections that <br /> give you another vibe.</p>
                             <a href='#categories' className='font-semibold text-sm underline cursor-pointer ' >ShopNow</a>
                         </div>
-                        <img src={Womenhat} className='w-80 transform -scale-x-100 ' />
+                        <img src={Womenhat} className='w-50 md:w-80 transform -scale-x-100 ' />
 
 
                     </div>
                     <div className='flex  justify-between '>
-                        <div className='bg-black text-white flex flex-col-reverse justify-center rounded relative w-[250px] hover:translate-y-[-10px]  transition-all duration-500 cursor-pointer'>
+                        <div className='bg-black text-white flex flex-col-reverse justify-center rounded relative w-[175px] md:w-[250px] hover:translate-y-[-10px]  transition-all duration-500 cursor-pointer'>
                             <img src={Speakers} className='absolute left-6  w-90' />
 
                             <div className='absolute bottom-5 left-5'>
@@ -46,13 +44,15 @@ const Newarrivals = () => {
                             </div>
 
                         </div>
-                        <div className='bg-black text-white rounded flex flex-col-reverse relative w-[250px] hover:translate-y-[-10px]  transition-all duration-500 cursor-pointer'>
+                        <div className='bg-black text-white rounded flex flex-col-reverse relative w-[175px] md:w-[250px] hover:translate-y-[-10px]  transition-all duration-500 cursor-pointer'>
                             <div className='absolute bottom-5 left-5'>
                                 <h2 className='font-semibold text-lg'>Perfume</h2>
                                 <p className='text-xs'>GUCCI INTENSE OUD EDP</p>
                                 <a href='#categories' className='font-semibold text-sm underline cursor-pointer ' >ShopNow</a>
                             </div>
-                            <img src={Perfume} className='w-50 ml-6' />
+                            <div className=''>
+                                <img src={Perfume} className='md:w-50 md:ml-6 ' />
+                            </div>
 
                         </div>
 

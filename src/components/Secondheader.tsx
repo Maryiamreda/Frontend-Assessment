@@ -29,8 +29,12 @@ const Secondheader = () => {
                 </div>
                 <button className='bg-[#27CE60] text-white rounded py-3 px-9'>Buy New!</button>
             </div>
+            <div className=' '>
+                <img src={Boombox} className='w-[700px] transform -scale-x-100 relative z-10 '
 
-            <img src={Boombox} className='w-[700px] transform -scale-x-100 relative z-10 ' />
+                />
+
+            </div>
 
 
 
