@@ -16,6 +16,22 @@ React + TypeScript project built with Vite for a frontend assessment assignment.
    cd Frontend-Assessment
 
 
+2. Install dependencies
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. Start the development server
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
 ## Features
 - Responsive design that works on all device sizes
 - Interactive product cards with hover effects
