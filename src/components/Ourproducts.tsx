@@ -179,7 +179,7 @@ const Ourproducts = () => {
                         </div>
                         <div className='flex gap-2'>
                             {item.colors.length > 0 &&
-                                item.colors.map((color, index) => (
+                                item.colors.map((color) => (
                                     <div className='item-color border border-transparent rounded-full hover:border-2 hover:border-black'>
                                         <div
                                             className=' w-4 h-4 rounded-full border border-transparent hover:border-2 hover:border-white'

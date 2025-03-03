@@ -32,7 +32,7 @@ const Categories = () => {
                 </div>
             </div>
             <div className='flex flex-col md:flex-row w-full gap-5 md:justify-between l-5'>
-                {items.map((item, index) => (
+                {items.map((item) => (
                     <div className=' icon-bg-white  flex flex-col justify-center items-center border border-gray-300 rounded w-35 h-35 hover:bg-[#DB4444] hover:text-white hover:border-transparent'>
                         <img src={item.image} className='w-13 icon-bg-white' />
                         <p className='text-sm font-medium'>{item.name}</p>
