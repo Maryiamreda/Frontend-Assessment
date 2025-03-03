@@ -15,3 +15,15 @@ React + TypeScript project built with Vite for a frontend assessment assignment.
    git clone https://github.com/YourUsername/Frontend-Assessment.git
    cd Frontend-Assessment
 
+
+## Features
+- Responsive design that works on all device sizes
+- Interactive product cards with hover effects
+- TypeScript for type safety
+- Tailwind CSS for styling
+
+## Technologies Used
+- React 
+- TypeScript
+- Vite
+- Tailwind CSS
