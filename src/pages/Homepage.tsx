@@ -7,7 +7,7 @@ import Ourproducts from '../components/Ourproducts';
 import Quicksearch from '../components/Quicksearch';
 import Secondheader from '../components/Secondheader';
 import Service from '../components/Service';
-import Arrow from '../assets/icons/Arrowright.svg';
+import Arrow from '/assets/icons/Arrowright.svg';
 const Homepage = () => {
     return (
         <div className='  '>

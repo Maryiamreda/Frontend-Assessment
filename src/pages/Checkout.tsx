@@ -1,13 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import Visa from '/assets/images/visa.png';
 import Bklash from '/assets/images/bklash.png'
 import MasterCard from '/assets/images/mastercard.png'
 import Payment from '/assets/images/payment.png'
-
+import Check from '/assets/icons/CheckBox.svg';
 const Checkout = () => {
     const { cart } = useContext(AppContext);
-
+    const [checked, setChecked] = useState(false)
     return (
         <div className="px-28 py-6 text-start">
             <div className="text-[#808080]"><p>Account / My Account / Product / View cart / <span className="text-black">CheckOut</span> </p></div>
@@ -52,7 +52,11 @@ const Checkout = () => {
                         </div>
 
                         <label className="flex items-center space-x-2">
-                            <input type="checkbox" className="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-red-500" />
+                            <div onClick={() => setChecked((prev) => !prev)}
+                                className={`w-4 h-4 border cursor-pointer  border-gray-200 rounded ${checked ? "bg-[#DB4444]" : "bg-white"}`}>
+                                <img src={Check} className="svg-white  w-5" />
+                            </div>
+                            {/* <input type="checkbox" className="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-red-500" /> */}
                             <span className="text-sm text-gray-600">Save this information for faster check-out next time</span>
                         </label>
                     </form>
