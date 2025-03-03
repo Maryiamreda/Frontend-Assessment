@@ -37,6 +37,8 @@ React + TypeScript project built with Vite for a frontend assessment assignment.
 - Interactive product cards with hover effects
 - TypeScript for type safety
 - Tailwind CSS for styling
+-  Cart and Wishlist functionality
+
 
 ## Technologies Used
 - React 
