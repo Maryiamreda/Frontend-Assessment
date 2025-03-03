@@ -38,7 +38,7 @@ React + TypeScript project built with Vite for a frontend assessment assignment.
 - TypeScript for type safety
 - Tailwind CSS for styling
 -  Cart and Wishlist functionality
-
+- Cart functionality where users can increase item quantities before checkout
 
 ## Technologies Used
 - React 
