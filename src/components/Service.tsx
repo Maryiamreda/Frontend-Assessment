@@ -1,7 +1,6 @@
-import React from 'react';
-import ServiceIcon from '../assets/icons/Services.svg'
-import Customer from '../assets/icons/Customer.svg'
-import Secure from '../assets/icons/Secure.svg'
+import ServiceIcon from '/assets/icons/Services.svg'
+import Customer from '/assets/icons/Customer.svg'
+import Secure from '/assets/icons/Secure.svg'
 
 const Service = () => {
     return (

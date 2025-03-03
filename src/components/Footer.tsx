@@ -1,12 +1,12 @@
-import Qr from '../assets/images/qr.jpeg'
-import Playstore from '../assets/images/playstore.svg'
-import Applestore from '../assets/images/applestore.svg'
-import Facebook from '../assets/icons/facebook.svg'
-import Twitter from '../assets/icons/twitter.svg'
-import Instegram from '../assets/icons/instegram.svg'
-import Linkedin from '../assets/icons/linkenin.svg'
-import Copyright from '../assets/icons/copyright.svg'
-import Send from '../assets/icons/send.svg'
+import Qr from '/assets/images/qr.jpeg'
+import Playstore from '/assets/images/playstore.svg'
+import Applestore from '/assets/images/applestore.svg'
+import Facebook from '/assets/icons/facebook.svg'
+import Twitter from '/assets/icons/twitter.svg'
+import Instegram from '/assets/icons/instegram.svg'
+import Linkedin from '/assets/icons/linkenin.svg'
+import Copyright from '/assets/icons/copyright.svg'
+import Send from '/assets/icons/send.svg'
 
 const Footer = () => {
     return (

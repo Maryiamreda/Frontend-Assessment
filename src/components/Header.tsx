@@ -1,6 +1,6 @@
-import Hero from '../assets/images/hero.svg';
-import Apple from '../assets/images/apple.png';
-import Arrowright from '../assets/icons/Arrowright.svg'
+import Hero from '/assets/images/hero.svg';
+import Apple from '/assets/images/apple.png';
+import Arrowright from '/assets/icons/Arrowright.svg'
 const Header = () => {
     return (
         <div className='bg-black text-white font-normal mt-10  pl-10 py-6 w-[800px]  '>

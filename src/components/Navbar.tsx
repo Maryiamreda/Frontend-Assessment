@@ -1,8 +1,7 @@
-import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import WishList from '../assets/icons/Wishlist.svg';
-import Search from '../assets/icons/SearchIcon.svg';
-import Cart from '../assets/icons/Cart.svg';
+import WishList from '/assets/icons/Wishlist.svg';
+import Search from '/assets/icons/SearchIcon.svg';
+import Cart from '/assets/icons/Cart.svg';
 const NavBar = () => {
     const navigate = useNavigate();
 

@@ -1,4 +1,4 @@
-import DropDown from '../assets/icons/DropDown.svg';
+import DropDown from '/assets/icons/DropDown.svg';
 const Topheader = () => {
     return (
         <div className='bg-black text-white text-base h-[44px]  flex flex-col md:flex-row justify-center items-center  '>

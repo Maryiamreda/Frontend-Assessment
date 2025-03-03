@@ -1,7 +1,7 @@
-import Speakers from '../assets/images/speakers.png';
-import Womenhat from '../assets/images/woman_wearing_hat.jpeg';
-import Playstation from '../assets/images/playstation.png';
-import Perfume from '../assets/images/perfume.png';
+import Speakers from '/assets/images/speakers.png';
+import Womenhat from '/assets/images/woman_wearing_hat.jpeg';
+import Playstation from '/assets/images/playstation.png';
+import Perfume from '/assets/images/perfume.png';
 
 const Newarrivals = () => {
     return (

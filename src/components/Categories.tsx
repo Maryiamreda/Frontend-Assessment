@@ -1,14 +1,12 @@
-import Arrow from '../assets/icons/Arrowright.svg';
-import Phones from '../assets/icons/Cellphone.svg';
-import Computers from '../assets/icons/Computer.svg';
-import SmartWatch from '../assets/icons/Smartwatch.svg';
-import Camera from '../assets/icons/Camera.svg';
-import Headphones from '../assets/icons/Headphone.svg';
-import Gaming from '../assets/icons/Gamepad.svg';
+import Arrow from '/assets/icons/Arrowright.svg';
 
 const items = [
-    { name: "Phones", image: Phones }, { name: "Computers", image: Computers }, { name: "SmartWatch", image: SmartWatch }, { name: "Camera", image: Camera }, { name: "Headphones", image: Headphones },
-    { name: "Gaming", image: Gaming },
+    { name: "Phones", image: '/assets/icons/Cellphone.svg' },
+    { name: "Computers", image: '/assets/icons/Computer.svg' },
+    { name: "SmartWatch", image: '/assets/icons/Smartwatch.svg' },
+    { name: "Camera", image: '/assets/icons/Camera.svg' },
+    { name: "Headphones", image: '/assets/icons/Headphone.svg' },
+    { name: "Gaming", image: '/assets/icons/Gamepad.svg' },
 ]
 const Categories = () => {
     return (

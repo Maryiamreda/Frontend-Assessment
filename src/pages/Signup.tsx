@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SignUp from '../assets/images/dl.beatsnoop.jpeg';
-import Google from '../assets/icons/Google.svg';
+import SignUp from '/assets/images/dl.beatsnoop.jpeg';
+import Google from '/assets/icons/Google.svg';
 const Signup = () => {
     const [state, setState] = useState('Sign Up')
     const [email, setEmail] = useState('')

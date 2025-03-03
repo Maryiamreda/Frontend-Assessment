@@ -1,18 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import Redgamepad from '../assets/images/red_gamepad.png';
-import GamingKey from '../assets/images/gaming_keyboard.png';
-import Gamingmonitor from '../assets/images/gaming_monitor.png';
-import Chair from '../assets/images/comfort_chair.png';
-import Laptop from '../assets/images/gaminglaptop.png';
-import Arrow from '../assets/icons/Arrowright.svg';
-import Eye from '../assets/icons/Filleyes.svg';
-import Heart from '../assets/icons/Wishlist.svg';
+import Arrow from '/assets/icons/Arrowright.svg';
+import Eye from '/assets/icons/Filleyes.svg';
+import Heart from '/assets/icons/Wishlist.svg';
 const items = [
-    { id: 1, name: "HAVIT HV-G92 Gamepad", currentPrice: 120, originalPrice: 160, discount: "-25%", image: Redgamepad, rating: 4.8, reviews: 88 },
-    { id: 2, name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, discount: "-20%", image: GamingKey, rating: 4.7, reviews: 75 },
-    { id: 3, name: "IPS LCD Gaming Monitor", currentPrice: 370, originalPrice: 400, discount: "-30%", image: Gamingmonitor, rating: 4.8, reviews: 99 },
-    { id: 4, name: "S-Series Comfort Chair", currentPrice: 375, originalPrice: 400, discount: "-25%", image: Chair, rating: 4.7, reviews: 99 },
-    { id: 5, name: "ASUS FHD Gaming Laptop", currentPrice: 960, originalPrice: 1160, discount: "-35%", image: Laptop, rating: 5, reviews: 65 }
+    { id: 1, name: "HAVIT HV-G92 Gamepad", currentPrice: 120, originalPrice: 160, discount: "-25%", image: '/assets/images/red_gamepad.png', rating: 4.8, reviews: 88 },
+    { id: 2, name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, discount: "-20%", image: '/assets/images/gaming_keyboard.png', rating: 4.7, reviews: 75 },
+    { id: 3, name: "IPS LCD Gaming Monitor", currentPrice: 370, originalPrice: 400, discount: "-30%", image: '/assets/images/gaming_monitor.png', rating: 4.8, reviews: 99 },
+    { id: 4, name: "S-Series Comfort Chair", currentPrice: 375, originalPrice: 400, discount: "-25%", image: '/assets/images/comfort_chair.png', rating: 4.7, reviews: 99 },
+    { id: 5, name: "ASUS FHD Gaming Laptop", currentPrice: 960, originalPrice: 1160, discount: "-35%", image: '/assets/images/gaminglaptop.png', rating: 5, reviews: 65 }
 ];
 
 const Flashsales = () => {

@@ -1,4 +1,4 @@
-import Boombox from '../assets/images/boombox.png'
+import Boombox from '/assets/images/boombox.png'
 const Secondheader = () => {
     return (
         // 27CE60

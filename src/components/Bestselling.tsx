@@ -1,11 +1,7 @@
-import NorthCoat from '../assets/images/noarth_coat.png'
-import GucciBag from '../assets/images/gucci_bag.png'
-import CPUCooler from '../assets/images/cpu.png'
-import BookShelf from '../assets/images/book_chair.png';
-import Eye from '../assets/icons/Filleyes.svg';
-import Heart from '../assets/icons/Wishlist.svg';
-import Fivestars from '../assets/icons/Fivestars.svg';
-import Fourstars from '../assets/icons/FourStars.svg';
+import Eye from '/assets/icons/Filleyes.svg';
+import Heart from '/assets/icons/Wishlist.svg';
+import Fivestars from '/assets/icons/Fivestars.svg';
+import Fourstars from '/assets/icons/FourStars.svg';
 
 import { useState } from 'react';
 const items = [
@@ -15,7 +11,7 @@ const items = [
         currentPrice: 260,
         originalPrice: 360,
         discount: "-28%",
-        image: NorthCoat,
+        image: '/assets/images/noarth_coat.png',
         rating: 5,
         reviews: 65
     },
@@ -25,7 +21,7 @@ const items = [
         currentPrice: 960,
         originalPrice: 1160,
         discount: "-17%",
-        image: GucciBag,
+        image: '/assets/images/gucci_bag.png',
         rating: 4,
         reviews: 65
     },
@@ -35,7 +31,7 @@ const items = [
         currentPrice: 160,
         originalPrice: 170,
         discount: "-6%",
-        image: CPUCooler,
+        image: '/assets/images/cpu.png',
         rating: 4,
         reviews: 65
     },
@@ -45,19 +41,13 @@ const items = [
         currentPrice: 360,
         originalPrice: null,
         discount: null,
-        image: BookShelf,
+        image: '/assets/images/book_chair.png',
         rating: 5,
         reviews: 65
     }
 ];
 const Bestselling = () => {
     const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-    const setstars = (rate: number) => {
-
-    }
-
-
-
     return (
         <div className='mx-28 mt-20 pb-20 border-b  border-b-gray-300  flex flex-col gap-5'>
             <div className='flex text-[#DB4444] text-sm font-semibold items-center gap-2 '>

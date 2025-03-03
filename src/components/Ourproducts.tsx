@@ -1,20 +1,13 @@
-import Arrow from '../assets/icons/Arrowright.svg';
-import DogFoodImg from '../assets/images/dogcar.jpeg';
-import CameraImg from '../assets/images/camera.png';
-import LaptopImg from '../assets/images/gaminglaptop.png';
-import CurologyImg from '../assets/images/productset.png';
-import ElectricCarImg from '../assets/images/electriccar.png';
-import SoccerCleatsImg from '../assets/images/soccer.png';
-import GamepadImg from '../assets/images/gamepad.png';
-import JacketImg from '../assets/images/jacket.png';
-import Eye from '../assets/icons/Filleyes.svg';
-import Fivestars from '../assets/icons/Fivestars.svg';
-import Threestars from '../assets/icons/Threestars.svg';
-import Fourstars from '../assets/icons/FourStars.svg';
+import Arrow from '/assets/icons/Arrowright.svg';
 
-import Heart from '../assets/icons/Wishlist.svg';
-import { useState } from 'react';
+import Eye from '/assets/icons/Filleyes.svg';
+import Fivestars from '/assets/icons/Fivestars.svg';
+import Threestars from '/assets/icons/Threestars.svg';
+import Fourstars from '/assets/icons/FourStars.svg';
 
+import Heart from '/assets/icons/Wishlist.svg';
+import { useContext, useState } from 'react';
+import { AppContext } from '../context/AppContext';
 const items = [
     {
         id: 1,
@@ -22,9 +15,8 @@ const items = [
         price: 100,
         rating: 3,
         reviews: 35,
-        image: DogFoodImg,
+        image: '/assets/images/dogcar.jpeg',
         colors: []
-
     },
     {
         id: 2,
@@ -32,10 +24,8 @@ const items = [
         price: 360,
         rating: 4.5,
         reviews: 95,
-        image: CameraImg,
+        image: '/assets/images/camera.png',
         colors: []
-
-
     },
     {
         id: 3,
@@ -43,10 +33,8 @@ const items = [
         price: 700,
         rating: 5,
         reviews: 325,
-        image: LaptopImg,
+        image: '/assets/images/gaminglaptop.png',
         colors: []
-
-
     },
     {
         id: 4,
@@ -54,10 +42,8 @@ const items = [
         price: 500,
         rating: 4,
         reviews: 145,
-        image: CurologyImg,
+        image: '/assets/images/productset.png',
         colors: []
-
-
     },
     {
         id: 5,
@@ -65,9 +51,8 @@ const items = [
         price: 960,
         rating: 5,
         reviews: 65,
-        image: ElectricCarImg,
+        image: '/assets/images/electriccar.png',
         colors: ["#FB1314", "black"]
-
     },
     {
         id: 6,
@@ -75,7 +60,7 @@ const items = [
         price: 1160,
         rating: 4.5,
         reviews: 35,
-        image: SoccerCleatsImg,
+        image: '/assets/images/soccer.png',
         colors: ["#EEFF61", "#DB4444"]
     },
     {
@@ -84,10 +69,8 @@ const items = [
         price: 550,
         rating: 5,
         reviews: 55,
-        image: GamepadImg,
+        image: '/assets/images/gamepad.png',
         colors: ["black", "#DB4444"]
-
-
     },
     {
         id: 8,
@@ -95,15 +78,14 @@ const items = [
         price: 660,
         rating: 4.5,
         reviews: 55,
-        image: JacketImg,
+        image: '/assets/images/jacket.png',
         colors: ["#184A48", "#DB4444"]
-
     }
 ];
 
 const Ourproducts = () => {
     const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-    const [selectedColor, setSelectedColor] = useState(null);
+    const { addToWishlist, addToCart } = useContext(AppContext);
 
     const ratingStars = (rating: number) => {
         if (rating === 5) {
@@ -155,8 +137,14 @@ const Ourproducts = () => {
                             <img src={item.image} alt={item.name} className={` ${item.name == "Breed Dry Dog Food" ? "w-20" : "w-40"} `} />
 
                             <div className="absolute top-3 right-3 flex flex-col gap-2">
-                                <button className="bg-white w-8 h-8 rounded-full flex items-center cursor-pointer shadow-sm justify-center ">
+                                <button
+                                    onClick={() => addToWishlist({
+                                        name: item.name,
+                                        image: item.image,
+                                        price: item.price
+                                    })} className="bg-white w-8 h-8 rounded-full flex items-center cursor-pointer shadow-sm justify-center ">
                                     <img src={Heart} className="w-4 h-4" alt="Favorite" />
+
                                 </button>
                                 <button className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm cursor-pointer">
                                     <img src={Eye} className="w-4 h-4" alt="Quick view" />
@@ -164,7 +152,13 @@ const Ourproducts = () => {
                             </div>
 
                             {hoveredItem === item.id && (
-                                <div className='bg-black text-white w-full py-1.5  font-medium text-sm
+                                <div
+                                    onClick={() => addToCart({
+                                        name: item.name,
+                                        image: item.image,
+                                        price: item.price
+                                    })}
+                                    className='bg-black text-white w-full py-1.5  font-medium text-sm
                                  flex justify-center items-center 
                                  absolute bottom-0 rounded-b left-0 cursor-pointer'>
                                     Add To Cart
