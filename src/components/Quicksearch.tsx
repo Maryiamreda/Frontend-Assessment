@@ -1,7 +1,7 @@
 import Dropdown from '/assets/icons/DropDown.svg';
 const Quicksearch = () => {
     return (
-        <div className=' flex flex-col gap-3  text-start font-normal text-black border-r pt-10  pr-10 border-r-gray-300 '>
+        <div className='hidden md:flex flex-col gap-3   text-start font-normal text-black border-r pt-10  pr-10 border-r-gray-300 '>
             <div className='flex   gap-10'>
                 <p> Woman's Fashion</p>
                 <img src={Dropdown} className="svg-black -rotate-90 cursor-pointer" />

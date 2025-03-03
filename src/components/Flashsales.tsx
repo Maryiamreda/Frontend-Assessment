@@ -55,13 +55,13 @@ const Flashsales = () => {
 
 
     return (
-        <div className='mt-20 border-b  border-b-gray-300  mx-28 flex flex-col gap-4 '>
+        <div className='mt-20 border-b  border-b-gray-300  mx-28 flex flex-col  gap-4 '>
             <div className='flex text-[#DB4444] text-sm font-semibold items-center gap-2 '>
                 <div className='bg-[#DB4444] w-3 h-7 rounded'></div>
                 <p>Today’s</p>
             </div>
-            <div className='flex justify-between items-center '>
-                <div className='flex gap-5 justify-center items-center'>
+            <div className='flex flex-col md:flex-row justify-between items-center '>
+                <div className='flex flex-col md:flex-row gap-5  justify-center items-center'>
                     <h1 className='text-3xl font-semibold'>Flash Sales</h1>
                     <div className="flex gap-2">
                         <div>

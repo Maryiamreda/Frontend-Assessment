@@ -11,7 +11,7 @@ import Send from '/assets/icons/send.svg'
 const Footer = () => {
     return (
         <div className=' footer bg-black text-white text-start mt-5  pt-4' >
-            <div className='flex justify-between px-2 md:px-28'>
+            <div className='flex justify-between flex-col md:flex-row gap-2 px-2 md:px-28'>
                 <div className='flex flex-col gap-2 '>
                     <h1 className='text-xl font-semibold'>Exclusive</h1>
                     <h2 className='text-lg'>Subscribe</h2>

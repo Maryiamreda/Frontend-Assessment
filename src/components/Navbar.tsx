@@ -10,7 +10,7 @@ const NavBar = () => {
 
     return (
 
-        <div className='flex  items-center justify-between border-b px-28 py-4 border-b-gray-300'>
+        <div className='flex  items-center justify-between border-b md:px-28 py-4 border-b-gray-300'>
             <h1 onClick={() => navigate("/")} className='text-xl font-bold cursor-pointer'>Exclusive</h1>
             <div className='text-base font-medium'>
                 <ul className='hidden md:inline-flex gap-5 '>

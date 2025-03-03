@@ -12,8 +12,8 @@ const Signup = () => {
 
     };
     return (
-        <div className="py-6 flex  gap-20 text-center">
-            <img src={SignUp} className="w-[690px] h-[500px]" />
+        <div className="py-6 flex  items-center flex-col md:flex-row   gap-20 text-center">
+            <img src={SignUp} className=" hidden md:flex md:w-80 lg:w-[690px] h-[500px]" />
             <div className={`flex flex-col gap-4 w-72 ${state == 'Sign Up' ? "mt-9" : "mt-20"}`}>
                 <div className="text-start">
                     <h1 className="text-3xl font-semibold">{state === 'Sign Up' ? "Create an Account" : "Log in to Exclusive"}</h1>
