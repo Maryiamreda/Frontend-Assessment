@@ -141,7 +141,8 @@ const Ourproducts = () => {
                                     onClick={() => addToWishlist({
                                         name: item.name,
                                         image: item.image,
-                                        price: item.price
+                                        price: item.price,
+                                        quantitiy: 1,
                                     })} className="bg-white w-8 h-8 rounded-full flex items-center cursor-pointer shadow-sm justify-center ">
                                     <img src={Heart} className="w-4 h-4" alt="Favorite" />
 
@@ -156,7 +157,9 @@ const Ourproducts = () => {
                                     onClick={() => addToCart({
                                         name: item.name,
                                         image: item.image,
-                                        price: item.price
+                                        price: item.price,
+                                        quantitiy: 1,
+
                                     })}
                                     className='bg-black text-white w-full py-1.5  font-medium text-sm
                                  flex justify-center items-center 

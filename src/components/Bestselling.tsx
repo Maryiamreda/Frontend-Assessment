@@ -3,7 +3,8 @@ import Heart from '/assets/icons/Wishlist.svg';
 import Fivestars from '/assets/icons/Fivestars.svg';
 import Fourstars from '/assets/icons/FourStars.svg';
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AppContext } from '../context/AppContext';
 const items = [
     {
         id: 1,
@@ -48,6 +49,8 @@ const items = [
 ];
 const Bestselling = () => {
     const [hoveredItem, setHoveredItem] = useState<number | null>(null);
+    const { addToWishlist, addToCart } = useContext(AppContext);
+
     return (
         <div className='mx-28 mt-20 pb-20 border-b  border-b-gray-300  flex flex-col gap-5'>
             <div className='flex text-[#DB4444] text-sm font-semibold items-center gap-2 '>
@@ -72,7 +75,15 @@ const Bestselling = () => {
                         <div className='bg-[#F7F7FC] h-48 p-3 rounded  relative flex justify-center items-center '>
                             <img src={item.image} alt={item.name} className="w-36 mx-auto" />
                             <div className="absolute top-3 right-3 flex flex-col gap-2">
-                                <button className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm hover:bg-gray-50">
+                                <button
+                                    onClick={() => addToWishlist({
+                                        name: item.name,
+                                        image: item.image,
+                                        price: item.currentPrice,
+                                        quantitiy: 1,
+
+                                    })}
+                                    className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm hover:bg-gray-50">
                                     <img src={Heart} className="w-4 h-4" alt="Favorite" />
                                 </button>
                                 <button className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm hover:bg-gray-50">
@@ -80,7 +91,15 @@ const Bestselling = () => {
                                 </button>
                             </div>
                             {hoveredItem === item.id && (
-                                <div className='bg-black text-white w-full py-1.5  font-medium text-sm
+                                <div
+                                    onClick={() => addToCart({
+                                        name: item.name,
+                                        image: item.image,
+                                        price: item.currentPrice,
+                                        quantitiy: 1,
+
+                                    })}
+                                    className='bg-black text-white w-full py-1.5  font-medium text-sm
                                  flex justify-center items-center 
                                  absolute bottom-0 rounded-b left-0 cursor-pointer'>
                                     Add To Cart

@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Arrow from '/assets/icons/Arrowright.svg';
 import Eye from '/assets/icons/Filleyes.svg';
 import Heart from '/assets/icons/Wishlist.svg';
+import { AppContext } from '../context/AppContext';
 const items = [
     { id: 1, name: "HAVIT HV-G92 Gamepad", currentPrice: 120, originalPrice: 160, discount: "-25%", image: '/assets/images/red_gamepad.png', rating: 4.8, reviews: 88 },
     { id: 2, name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, discount: "-20%", image: '/assets/images/gaming_keyboard.png', rating: 4.7, reviews: 75 },
@@ -13,6 +14,7 @@ const items = [
 const Flashsales = () => {
     const [hoveredItem, setHoveredItem] = useState<number | null>(null);
     const scrollRef = useRef<HTMLDivElement | null>(null);
+    const { addToWishlist, addToCart } = useContext(AppContext);
 
     const scroll = (direction: string) => {
         if (scrollRef.current) {
@@ -116,7 +118,15 @@ const Flashsales = () => {
                             <img src={item.image} alt={item.name} className="w-36 mx-auto" />
 
                             <div className="absolute top-3 right-3 flex flex-col gap-2">
-                                <button className="bg-white w-8 h-8 rounded-full flex items-center cursor-pointer shadow-sm justify-center ">
+                                <button
+                                    onClick={() => addToWishlist({
+                                        name: item.name,
+                                        image: item.image,
+                                        price: item.currentPrice,
+                                        quantitiy: 1,
+
+                                    })}
+                                    className="bg-white w-8 h-8 rounded-full flex items-center cursor-pointer shadow-sm justify-center ">
                                     <img src={Heart} className="w-4 h-4" alt="Favorite" />
                                 </button>
                                 <button className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm cursor-pointer">
@@ -125,7 +135,15 @@ const Flashsales = () => {
                             </div>
 
                             {hoveredItem === item.id && (
-                                <div className='bg-black text-white w-full py-1.5  font-medium text-sm
+                                <div
+                                    onClick={() => addToCart({
+                                        name: item.name,
+                                        image: item.image,
+                                        price: item.currentPrice,
+                                        quantitiy: 1,
+
+                                    })}
+                                    className='bg-black text-white w-full py-1.5  font-medium text-sm
                                  flex justify-center items-center 
                                  absolute bottom-0 rounded-b left-0 cursor-pointer'>
                                     Add To Cart
@@ -134,7 +152,7 @@ const Flashsales = () => {
                         </div>
                         <h3 className="mt-2 font-bold text-sm">{item.name}</h3>
                         <div className=' flex gap-3 items-center '>
-                            <p className="text-base text-red-500 font-semibold ">${item.currentPrice}</p>
+                            <p className="text-base text-[#DB4444]font-semibold ">${item.currentPrice}</p>
                             <p className="text-xs font-semibold line-through text-gray-500">${item.originalPrice}</p>
                         </div>
                         <div className='flex gap-3 items-center '>
