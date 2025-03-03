@@ -5,6 +5,7 @@ import Fourstars from '/assets/icons/FourStars.svg';
 
 import { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
+import { toast } from 'sonner';
 const items = [
     {
         id: 1,
@@ -76,14 +77,18 @@ const Bestselling = () => {
                             <img src={item.image} alt={item.name} className="w-36 mx-auto" />
                             <div className="absolute top-3 right-3 flex flex-col gap-2">
                                 <button
-                                    onClick={() => addToWishlist({
-                                        name: item.name,
-                                        image: item.image,
-                                        price: item.currentPrice,
-                                        quantitiy: 1,
+                                    onClick={() => {
+                                        addToWishlist({
+                                            name: item.name,
+                                            image: item.image,
+                                            price: item.currentPrice,
+                                            quantitiy: 1,
 
-                                    })}
-                                    className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm hover:bg-gray-50">
+                                        }),
+                                            toast('Added To Whishlist')
+
+                                    }}
+                                    className="bg-white w-8 h-8 rounded-full flex items-center justify-center cursor-pointer shadow-sm hover:bg-gray-50">
                                     <img src={Heart} className="w-4 h-4" alt="Favorite" />
                                 </button>
                                 <button className="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm hover:bg-gray-50">
@@ -92,13 +97,17 @@ const Bestselling = () => {
                             </div>
                             {hoveredItem === item.id && (
                                 <div
-                                    onClick={() => addToCart({
-                                        name: item.name,
-                                        image: item.image,
-                                        price: item.currentPrice,
-                                        quantitiy: 1,
+                                    onClick={() => {
+                                        addToCart({
+                                            name: item.name,
+                                            image: item.image,
+                                            price: item.currentPrice,
+                                            quantitiy: 1,
 
-                                    })}
+                                        }),
+                                            toast('Added To Cart')
+
+                                    }}
                                     className='bg-black text-white w-full py-1.5  font-medium text-sm
                                  flex justify-center items-center 
                                  absolute bottom-0 rounded-b left-0 cursor-pointer'>

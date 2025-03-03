@@ -10,11 +10,14 @@ import Wishlist from './pages/Wishlist';
 import Cart from './pages/Cart';
 import Footer from './components/Footer';
 import Checkout from './pages/Checkout';
+import { Toaster } from 'sonner';
 
 function App() {
 
   return (
     <>
+      <Toaster position="top-left" />
+
       <Topheader />
       <Navbar />
       <Routes>

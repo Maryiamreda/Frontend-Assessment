@@ -1,4 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react';
+import { toast } from 'sonner'
+
 import Arrow from '/assets/icons/Arrowright.svg';
 import Eye from '/assets/icons/Filleyes.svg';
 import Heart from '/assets/icons/Wishlist.svg';
@@ -8,7 +10,31 @@ const items = [
     { id: 2, name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, discount: "-20%", image: '/assets/images/gaming_keyboard.png', rating: 4.7, reviews: 75 },
     { id: 3, name: "IPS LCD Gaming Monitor", currentPrice: 370, originalPrice: 400, discount: "-30%", image: '/assets/images/gaming_monitor.png', rating: 4.8, reviews: 99 },
     { id: 4, name: "S-Series Comfort Chair", currentPrice: 375, originalPrice: 400, discount: "-25%", image: '/assets/images/comfort_chair.png', rating: 4.7, reviews: 99 },
-    { id: 5, name: "ASUS FHD Gaming Laptop", currentPrice: 960, originalPrice: 1160, discount: "-35%", image: '/assets/images/gaminglaptop.png', rating: 5, reviews: 65 }
+    {
+        id: 8,
+        name: "The north coat",
+        currentPrice: 260,
+        originalPrice: 360,
+        discount: "-28%",
+        image: '/assets/images/noarth_coat.png',
+        rating: 5,
+        reviews: 65
+    },
+
+    { id: 5, name: "ASUS FHD Gaming Laptop", currentPrice: 960, originalPrice: 1160, discount: "-35%", image: '/assets/images/gaminglaptop.png', rating: 5, reviews: 65 },
+    { id: 6, name: "HAVIT HV-G92 Gamepad", currentPrice: 120, originalPrice: 160, discount: "-25%", image: '/assets/images/red_gamepad.png', rating: 4.8, reviews: 88 },
+    { id: 7, name: "AK-900 Wired Keyboard", currentPrice: 960, originalPrice: 1160, discount: "-20%", image: '/assets/images/gaming_keyboard.png', rating: 4.7, reviews: 75 },
+    {
+        id: 8,
+        name: "The north coat",
+        currentPrice: 260,
+        originalPrice: 360,
+        discount: "-28%",
+        image: '/assets/images/noarth_coat.png',
+        rating: 5,
+        reviews: 65
+    },
+
 ];
 
 const Flashsales = () => {
@@ -119,13 +145,17 @@ const Flashsales = () => {
 
                             <div className="absolute top-3 right-3 flex flex-col gap-2">
                                 <button
-                                    onClick={() => addToWishlist({
-                                        name: item.name,
-                                        image: item.image,
-                                        price: item.currentPrice,
-                                        quantitiy: 1,
+                                    onClick={() => {
+                                        addToWishlist({
+                                            name: item.name,
+                                            image: item.image,
+                                            price: item.currentPrice,
+                                            quantitiy: 1,
 
-                                    })}
+                                        }),
+                                            toast('Added To Whislist')
+
+                                    }}
                                     className="bg-white w-8 h-8 rounded-full flex items-center cursor-pointer shadow-sm justify-center ">
                                     <img src={Heart} className="w-4 h-4" alt="Favorite" />
                                 </button>
@@ -136,13 +166,16 @@ const Flashsales = () => {
 
                             {hoveredItem === item.id && (
                                 <div
-                                    onClick={() => addToCart({
-                                        name: item.name,
-                                        image: item.image,
-                                        price: item.currentPrice,
-                                        quantitiy: 1,
+                                    onClick={() => {
+                                        addToCart({
+                                            name: item.name,
+                                            image: item.image,
+                                            price: item.currentPrice,
+                                            quantitiy: 1,
 
-                                    })}
+                                        }),
+                                            toast('Added To Cart')
+                                    }}
                                     className='bg-black text-white w-full py-1.5  font-medium text-sm
                                  flex justify-center items-center 
                                  absolute bottom-0 rounded-b left-0 cursor-pointer'>
