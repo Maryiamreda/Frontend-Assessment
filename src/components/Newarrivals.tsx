@@ -35,6 +35,8 @@ const Newarrivals = () => {
                     </div>
                     <div className='flex  justify-between '>
                         <div className='bg-black text-white flex flex-col-reverse justify-center rounded relative w-[175px] md:w-[250px] hover:translate-y-[-10px]  transition-all duration-500 cursor-pointer'>
+                            <div className="absolute inset-0 z-0 blur-2xl opacity-20 bg-white rounded-full scale-150 transform translate-y-6"></div>
+
                             <img src={Speakers} className='absolute left-6  w-90' />
 
                             <div className='absolute bottom-5 left-5'>
@@ -51,6 +53,8 @@ const Newarrivals = () => {
                                 <a href='#categories' className='font-semibold text-sm underline cursor-pointer ' >ShopNow</a>
                             </div>
                             <div className=''>
+                                <div className="absolute inset-0 z-0 blur-2xl opacity-20 bg-white rounded-full scale-150 transform translate-y-6"></div>
+
                                 <img src={Perfume} className='md:w-50 md:ml-6 ' />
                             </div>
 

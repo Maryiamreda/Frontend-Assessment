@@ -29,18 +29,19 @@ const Secondheader = () => {
                 </div>
                 <button className='bg-[#27CE60] text-white rounded py-3 px-9'>Buy New!</button>
             </div>
-            <div className=' '>
-                <img src={Boombox} className='w-[700px] transform -scale-x-100 relative z-10 '
-
-                />
-
+            <div className="relative w-full overflow-hidden">
+                <div className="relative mx-auto w-fit">
+                    <img
+                        src={Boombox}
+                        className="w-[700px] transform -scale-x-100 relative z-10"
+                    />
+                    <div
+                        className="absolute inset-0 z-0 blur-xl opacity-10 bg-white rounded-full scale-60 transform translate-y-4"
+                    ></div>
+                </div>
             </div>
-
-
-
 
         </div>
     );
 }
-
 export default Secondheader;

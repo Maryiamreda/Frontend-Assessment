@@ -78,3 +78,16 @@ body {
   border-top: 1px solid rgba(209, 213, 220, 0.16);
 
 }
+
+.form-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #A0A3BD;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #F5F5F5;
+  outline: none;
+}
