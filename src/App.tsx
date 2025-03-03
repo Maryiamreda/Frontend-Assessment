@@ -9,6 +9,7 @@ import Signup from './pages/Signup';
 import Wishlist from './pages/Wishlist';
 import Cart from './pages/Cart';
 import Footer from './components/Footer';
+import Checkout from './pages/Checkout';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
 
       </Routes>
       <Footer />

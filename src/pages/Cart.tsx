@@ -60,6 +60,40 @@ const Cart = () => {
                     ${item.price * item.quantitiy}
                 </p>
             </div>))}
+            <div className="flex justify-between pt-7">
+                <button onClick={() => navigate("/cart")} className="cursor-pointer border border-[#9096A2] px-10 py-2 rounded text-sm  ">Update Cart</button>
+
+                <button onClick={() => navigate("/")} className="cursor-pointer border border-[#9096A2] px-10 py-2 rounded text-sm  ">Return To Shop</button>
+
+            </div>
+            <div className="flex justify-between pt-7">
+                <div className="flex gap-5">
+                    <div className=' rounded px-10  h-15 border border-black placeholder-[#9096A2 ] font-medium '>
+                        <input type="text" placeholder="Coupon Code" className='text-xs focus:outline-0' />
+                    </div>
+                    <button className="text-white bg-[#DB4444] cursor-pointer p-2.5 text-xs w-40 rounded my-10  flex justify-center ">Apply Coupon</button>
+                </div>
+                <div className="border border-black w-[500px] mx-5">
+                    <h2 className="text-xl">Cart Total</h2>
+                    <div className="flex justify-between py-5 border-b border-b-[#D9DBE9] text-lg">
+                        <p className="">Subtotal:</p>
+                        <p>  {cart.reduce((total, item) => total + item.quantitiy * item.price, 0)}
+                        </p>
+                    </div>
+                    <div className="flex justify-between py-5 border-b border-b-[#D9DBE9] text-lg">
+                        <p className="">Shipping:</p>
+                        <p>  Free
+                        </p>
+                    </div>
+                    <div className="flex justify-between py-5 border-b border-b-[#D9DBE9] text-lg">
+                        <p>Total:</p>
+                        <p>{cart.reduce((total, item) => total + item.quantitiy * item.price, 0)}</p>
+                    </div>
+                    <button onClick={() => navigate("/checkout")} className="text-white bg-[#DB4444] cursor-pointer p-2.5 text-xs w-40 rounded my-10  flex justify-center ">Procees to checkout</button>
+
+                </div>
+
+            </div>
 
         </div>
     );
